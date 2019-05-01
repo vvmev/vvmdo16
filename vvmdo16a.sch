@@ -752,7 +752,7 @@ L mechanical:Mounting_Hole_PAD MK1
 U 1 1 5D01467E
 P 4250 5900
 F 0 "MK1" H 4350 5949 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 4350 5858 50  0000 L CNN
+F 1 "M2.5" H 4350 5858 50  0000 L CNN
 F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5_DIN965_Pad" H 4250 5900 50  0001 C CNN
 F 3 "" H 4250 5900 50  0001 C CNN
 	1    4250 5900
@@ -761,68 +761,27 @@ $EndComp
 $Comp
 L mechanical:Mounting_Hole_PAD MK2
 U 1 1 5D014BC8
-P 4500 5900
-F 0 "MK2" H 4600 5949 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 4600 5858 50  0000 L CNN
-F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5_DIN965_Pad" H 4500 5900 50  0001 C CNN
-F 3 "" H 4500 5900 50  0001 C CNN
-	1    4500 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L mechanical:Mounting_Hole_PAD MK3
-U 1 1 5D014C18
-P 4750 5900
-F 0 "MK3" H 4850 5949 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 4850 5858 50  0000 L CNN
-F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5_DIN965_Pad" H 4750 5900 50  0001 C CNN
-F 3 "" H 4750 5900 50  0001 C CNN
-	1    4750 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L mechanical:Mounting_Hole_PAD MK4
-U 1 1 5D014E7E
-P 5000 5900
-F 0 "MK4" H 5100 5949 50  0000 L CNN
-F 1 "Mounting_Hole_PAD" H 5100 5858 50  0000 L CNN
-F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5_DIN965_Pad" H 5000 5900 50  0001 C CNN
-F 3 "" H 5000 5900 50  0001 C CNN
-	1    5000 5900
+P 4550 5900
+F 0 "MK2" H 4650 5949 50  0000 L CNN
+F 1 "M2.5" H 4650 5858 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_2.7mm_M2.5_DIN965_Pad" H 4550 5900 50  0001 C CNN
+F 3 "" H 4550 5900 50  0001 C CNN
+	1    4550 5900
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0107
 U 1 1 5D0210BD
-P 4650 6250
-F 0 "#PWR0107" H 4650 6000 50  0001 C CNN
-F 1 "GND" H 4655 6077 50  0000 C CNN
-F 2 "" H 4650 6250 50  0001 C CNN
-F 3 "" H 4650 6250 50  0001 C CNN
-	1    4650 6250
+P 4400 6250
+F 0 "#PWR0107" H 4400 6000 50  0001 C CNN
+F 1 "GND" H 4405 6077 50  0000 C CNN
+F 2 "" H 4400 6250 50  0001 C CNN
+F 3 "" H 4400 6250 50  0001 C CNN
+	1    4400 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4250 6000 4250 6100
-Wire Wire Line
-	4250 6100 4500 6100
-Wire Wire Line
-	4650 6100 4650 6250
-Wire Wire Line
-	4500 6000 4500 6100
-Connection ~ 4500 6100
-Wire Wire Line
-	4500 6100 4650 6100
-Wire Wire Line
-	4650 6100 4750 6100
-Wire Wire Line
-	4750 6100 4750 6000
-Connection ~ 4650 6100
-Wire Wire Line
-	4750 6100 5000 6100
-Wire Wire Line
-	5000 6100 5000 6000
-Connection ~ 4750 6100
 Wire Wire Line
 	7000 1900 8450 1900
 Wire Wire Line
@@ -863,16 +822,33 @@ L Switch:SW_Coded_SH-7010 SW1
 U 1 1 5CCA678D
 P 1850 3750
 F 0 "SW1" H 1907 4217 50  0000 C CNN
-F 1 "SW_Coded_SH-7010" H 1907 4126 50  0000 C CNN
+F 1 "220ADC16" H 1907 4126 50  0000 C CNN
 F 2 "Buttons_Switches_THT:Nidec_Copal_SH-7010C" H 1550 3300 50  0001 L CNN
 F 3 "https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf" H 1850 3750 50  0001 C CNN
 	1    1850 3750
 	1    0    0    -1  
 $EndComp
+Text Label 3050 3650 0    50   ~ 0
+A0
+Text Label 3050 3750 0    50   ~ 0
+A1
+Text Label 3050 3850 0    50   ~ 0
+A2
+Text Label 3050 3950 0    50   ~ 0
+A3
+Wire Wire Line
+	4250 6100 4400 6100
+Wire Wire Line
+	4400 6100 4400 6250
+Wire Wire Line
+	4400 6100 4550 6100
+Wire Wire Line
+	4550 6100 4550 6000
 Wire Bus Line
 	9700 2050 9700 3450
 Wire Bus Line
 	8550 2050 8550 3450
 Wire Bus Line
 	7550 2050 7550 4450
+Connection ~ 4400 6100
 $EndSCHEMATC
