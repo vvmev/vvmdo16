@@ -407,15 +407,15 @@ O14
 Text Label 9400 3450 0    50   ~ 0
 O16
 $Comp
-L conn:Conn_02x05_Odd_Even J1
+L conn:Conn_02x04_Odd_Even J1
 U 1 1 5CD0D077
-P 1950 2850
-F 0 "J1" H 2000 3267 50  0000 C CNN
-F 1 "517-N2510-6002RB" H 2000 3176 50  0000 C CNN
-F 2 "Connectors_IDC:IDC-Header_2x05_Pitch2.54mm_Straight" H 1950 2850 50  0001 C CNN
-F 3 "~" H 1950 2850 50  0001 C CNN
-	1    1950 2850
-	1    0    0    -1  
+P 2250 2350
+F 0 "J1" H 2300 2767 50  0000 C CNN
+F 1 "517-N2508-6002RB" H 2300 2676 50  0000 C CNN
+F 2 "Connector-IDC:IDC-Header_2x04_P2.54mm_Vertical" H 2250 2350 50  0001 C CNN
+F 3 "~" H 2250 2350 50  0001 C CNN
+	1    2250 2350
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2250 3650 2550 3650
@@ -458,29 +458,6 @@ F 3 "" H 3000 4450 50  0001 C CNN
 	1    3000 4450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3950 1750 3950 2000
-Wire Wire Line
-	3250 2750 2250 2750
-Wire Wire Line
-	3250 2850 2750 2850
-Wire Wire Line
-	2750 2850 2750 2350
-Wire Wire Line
-	2750 2350 1550 2350
-Wire Wire Line
-	1550 2350 1550 2750
-Wire Wire Line
-	1550 2750 1750 2750
-Wire Wire Line
-	1750 2650 1350 2650
-Wire Wire Line
-	1350 2650 1350 2000
-Wire Wire Line
-	1350 2000 2450 2000
-Connection ~ 3950 2000
-Wire Wire Line
-	3950 2000 3950 2450
 Wire Wire Line
 	3250 4150 3150 4150
 Wire Wire Line
@@ -540,48 +517,20 @@ Wire Wire Line
 	2550 4950 2700 4950
 Connection ~ 2700 4950
 Wire Wire Line
-	2250 2650 2450 2650
-Wire Wire Line
-	2450 2650 2450 2000
-Connection ~ 2450 2000
-Wire Wire Line
-	2450 2000 3950 2000
-Wire Wire Line
-	2250 3050 2350 3050
-Wire Wire Line
 	2350 3050 2350 4950
 Wire Wire Line
 	2350 4950 2550 4950
 Connection ~ 2550 4950
 Wire Wire Line
-	1750 3050 1450 3050
-Wire Wire Line
-	1450 3050 1450 4950
-Wire Wire Line
 	1450 4950 2350 4950
 Connection ~ 2350 4950
-Wire Wire Line
-	2250 2950 2550 2950
-Wire Wire Line
-	2550 2950 2550 1900
-Wire Wire Line
-	2550 1900 1450 1900
-Wire Wire Line
-	1450 1900 1450 2950
-Wire Wire Line
-	1450 2950 1750 2950
-Wire Wire Line
-	2550 1900 7000 1900
-Connection ~ 2550 1900
 Connection ~ 7000 1900
 Wire Wire Line
 	7000 1900 7000 1650
-Text Label 2300 2750 0    50   ~ 0
+Text Label 3000 2750 0    50   ~ 0
 SCL
-Text Label 1600 2750 0    50   ~ 0
+Text Label 3000 2850 0    50   ~ 0
 SDA
-Text Label 2300 2950 0    50   ~ 0
-+12V
 $Comp
 L device:C C1
 U 1 1 5CEAED25
@@ -693,14 +642,13 @@ Wire Wire Line
 	7150 3300 7150 4950
 Wire Wire Line
 	3250 3050 3000 3050
-Connection ~ 2350 3050
 Wire Wire Line
 	3250 2950 3000 2950
 Wire Wire Line
 	3000 2950 3000 3050
 Connection ~ 3000 3050
 Wire Wire Line
-	3000 3050 2350 3050
+	3000 3050 2500 3050
 $Comp
 L device:C C3
 U 1 1 5CFE74A0
@@ -810,11 +758,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 3300 1350 3300
 Wire Wire Line
-	1350 3300 1350 2650
-Connection ~ 1350 2650
-Wire Wire Line
 	1350 4150 1350 3300
-Connection ~ 1350 3300
 Wire Wire Line
 	2250 3950 3000 3950
 $Comp
@@ -844,11 +788,118 @@ Wire Wire Line
 	4400 6100 4550 6100
 Wire Wire Line
 	4550 6100 4550 6000
+Connection ~ 4400 6100
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 5CEB80C2
+P 1350 3150
+F 0 "#PWR0108" H 1350 3000 50  0001 C CNN
+F 1 "+3.3V" H 1365 3323 50  0000 C CNN
+F 2 "" H 1350 3150 50  0001 C CNN
+F 3 "" H 1350 3150 50  0001 C CNN
+	1    1350 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 3150 1350 3300
+Connection ~ 1350 3300
+Wire Wire Line
+	2900 2750 2900 2350
+Wire Wire Line
+	2900 2350 2450 2350
+Wire Wire Line
+	2900 2750 3250 2750
+Wire Wire Line
+	1700 2850 1700 2350
+Wire Wire Line
+	1700 2350 1950 2350
+Wire Wire Line
+	1700 2850 3250 2850
+Wire Wire Line
+	1950 2450 1800 2450
+Wire Wire Line
+	1800 2450 1800 2600
+Wire Wire Line
+	1800 2600 2500 2600
+Wire Wire Line
+	2500 2600 2500 3050
+Connection ~ 2500 3050
+Wire Wire Line
+	2500 3050 2350 3050
+Wire Wire Line
+	2450 2450 2500 2450
+Wire Wire Line
+	2500 2450 2500 2500
+Connection ~ 2500 2600
+Wire Wire Line
+	1950 2250 1700 2250
+Wire Wire Line
+	1700 2250 1700 1750
+Wire Wire Line
+	1700 1750 2500 1750
+Connection ~ 3950 1750
+Wire Wire Line
+	3950 1750 3950 2450
+Wire Wire Line
+	2450 2250 2500 2250
+Wire Wire Line
+	2500 2250 2500 1750
+Connection ~ 2500 1750
+Wire Wire Line
+	2500 1750 3950 1750
+Wire Wire Line
+	2450 2150 2600 2150
+Wire Wire Line
+	2600 2150 2600 2000
+$Comp
+L conn:Conn_02x01 J3
+U 1 1 5CF8667A
+P 2900 2000
+F 0 "J3" H 2950 2217 50  0000 C CNN
+F 1 "Conn_02x01" H 2950 2126 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x01_Pitch2.54mm" H 2900 2000 50  0001 C CNN
+F 3 "~" H 2900 2000 50  0001 C CNN
+	1    2900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2000 2600 2000
+Wire Wire Line
+	2600 2000 1850 2000
+Wire Wire Line
+	1850 2000 1850 2150
+Wire Wire Line
+	1850 2150 1950 2150
+Connection ~ 2600 2000
+$Comp
+L conn:Conn_02x01 J4
+U 1 1 5CF9F54F
+P 3300 2200
+F 0 "J4" V 3304 2280 50  0000 L CNN
+F 1 "Conn_02x01" V 3395 2280 50  0000 L CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_PT-3.5mm_2pol" H 3300 2200 50  0001 C CNN
+F 3 "~" H 3300 2200 50  0001 C CNN
+	1    3300 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 2000 3300 2000
+Wire Wire Line
+	3300 2000 3300 1900
+Wire Wire Line
+	3300 1900 7000 1900
+Connection ~ 3300 2000
+Wire Wire Line
+	3300 2500 2500 2500
 Wire Bus Line
 	9700 2050 9700 3450
 Wire Bus Line
 	8550 2050 8550 3450
 Wire Bus Line
 	7550 2050 7550 4450
-Connection ~ 4400 6100
+Connection ~ 2500 2500
+Wire Wire Line
+	2500 2500 2500 2600
+Text Label 2000 2000 0    50   ~ 0
++12VIN
 $EndSCHEMATC
