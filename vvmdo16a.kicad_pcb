@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 1.2192)
+    (last_trace_width 0.127)
     (user_trace_width 0.2032)
     (user_trace_width 0.3048)
     (user_trace_width 0.4064)
@@ -1040,8 +1040,8 @@
     )
   )
 
-  (gr_text "VVM Digital Out\ngithub.com/vvmev\nrev  1.0" (at 149.606 70.104) (layer F.SilkS)
-    (effects (font (size 1.016 1.016) (thickness 0.1524)) (justify left))
+  (gr_text "VVM Digital Out 16\ngithub.com/vvmev\nrev 1.0" (at 149.606 70.104) (layer F.SilkS)
+    (effects (font (size 0.9652 0.9652) (thickness 0.1524)) (justify left))
   )
   (dimension 35 (width 0.15) (layer Dwgs.User)
     (gr_text 35mm (at 146.5 133.3) (layer Dwgs.User)
