@@ -459,14 +459,7 @@ F 3 "" H 3000 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 4150 3150 4150
-Wire Wire Line
 	3250 4050 3150 4050
-Wire Wire Line
-	3150 4050 3150 4150
-Connection ~ 3150 4150
-Wire Wire Line
-	3150 4150 1350 4150
 Wire Wire Line
 	3000 4350 3000 3950
 Connection ~ 3000 3950
@@ -499,7 +492,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 4550 3000 4950
 Wire Wire Line
-	3000 4950 3950 4950
+	3000 4950 3150 4950
 Connection ~ 3950 4950
 Wire Wire Line
 	2850 4550 2850 4950
@@ -891,15 +884,22 @@ Wire Wire Line
 Connection ~ 3300 2000
 Wire Wire Line
 	3300 2500 2500 2500
+Connection ~ 2500 2500
+Wire Wire Line
+	2500 2500 2500 2600
+Text Label 2000 2000 0    50   ~ 0
++12VIN
+Wire Wire Line
+	1350 4150 3250 4150
+Wire Wire Line
+	3150 4050 3150 4950
 Wire Bus Line
 	9700 2050 9700 3450
 Wire Bus Line
 	8550 2050 8550 3450
 Wire Bus Line
 	7550 2050 7550 4450
-Connection ~ 2500 2500
+Connection ~ 3150 4950
 Wire Wire Line
-	2500 2500 2500 2600
-Text Label 2000 2000 0    50   ~ 0
-+12VIN
+	3150 4950 3950 4950
 $EndSCHEMATC
